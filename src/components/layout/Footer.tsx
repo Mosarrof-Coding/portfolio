@@ -51,10 +51,10 @@ const Footer = () => {
             <FaLinkedin className="w-6 h-6 hover:text-indigo-400" />
           </a>
           <a
-            href="https://twitter.com/your-twitter"
+            href="https://www.facebook.com/Mhosain66/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="facebook"
           >
             <FaFacebook className="w-6 h-6 hover:text-indigo-400" />
           </a>

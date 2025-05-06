@@ -121,6 +121,9 @@
   .link {
     @apply font-bricolage;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 @layer components {
   .btn {
