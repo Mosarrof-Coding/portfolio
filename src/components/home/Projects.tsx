@@ -91,18 +91,20 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gray-50 py-20">
+    <section id="projects" className="py-20">
       <div className="mx-auto px-4 max-w-5xl">
-        <h2 className="mb-12 font-bold text-3xl text-center">Projects</h2>
-        <div className="gap-8 grid md:grid-cols-2">
+        <h2 className="mb-12 font-bold text-royal text-3xl text-center">
+          Projects
+        </h2>
+        <div className="gap-6 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white shadow p-6 rounded-md">
+            <div key={index} className="bg-card shadow p-6 rounded-md">
               <h3 className="font-semibold text-xl">{project.title}</h3>
-              <p className="mt-2 text-gray-600">{project.description}</p>
+              <p className="mt-2">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
-                className="inline-block mt-4 text-indigo-600"
+                className="inline-block mt-4"
               >
                 Visit →
               </a>

@@ -3,14 +3,14 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 mt-16 w-full text-gray-200">
+    <footer className="mt-16 border-t border-border/20 w-full">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-10 max-w-7xl">
         {/* Branding */}
         <div className="flex flex-col items-center">
-          <h2 className="font-bold text-indigo-500 text-2xl">
+          <h2 className="font-bold text-royal text-xl md:text-2xl">
             Mosharof Hosain
           </h2>
-          <p className="mt-2 text-gray-400 text-sm text-center">
+          <p className="mt-2 text-sm text-center">
             Frontend Developer | Next.js Enthusiast | Building performant,
             modern web experiences.
           </p>
@@ -18,16 +18,16 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex justify-center space-x-6 mt-6">
-          <Link href="#about" className="hover:text-indigo-400 transition">
+          <Link href="#about" className="hover:text-royal transition">
             About
           </Link>
-          <Link href="#projects" className="hover:text-indigo-400 transition">
+          <Link href="#projects" className="hover:text-royal transition">
             Projects
           </Link>
-          <Link href="#skills" className="hover:text-indigo-400 transition">
+          <Link href="#skills" className="hover:text-royal transition">
             Skills
           </Link>
-          <Link href="#contact" className="hover:text-indigo-400 transition">
+          <Link href="#contact" className="hover:text-royal transition">
             Contact
           </Link>
         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithub className="w-6 h-6 hover:text-indigo-400" />
+            <FaGithub className="w-6 h-6 hover:text-royal" />
           </a>
           <a
             href="https://www.linkedin.com/in/mosarrofhosain/"
@@ -48,7 +48,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin className="w-6 h-6 hover:text-indigo-400" />
+            <FaLinkedin className="w-6 h-6 hover:text-royal" />
           </a>
           <a
             href="https://www.facebook.com/Mhosain66/"
@@ -56,7 +56,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="facebook"
           >
-            <FaFacebook className="w-6 h-6 hover:text-indigo-400" />
+            <FaFacebook className="w-6 h-6 hover:text-royal" />
           </a>
           <a
             href="https://twitter.com/your-twitter"
@@ -64,12 +64,12 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="Twitter"
           >
-            <FaTwitter className="w-6 h-6 hover:text-indigo-400" />
+            <FaTwitter className="w-6 h-6 hover:text-royal" />
           </a>
         </div>
 
         {/* Copyright */}
-        <div className="mt-6 text-gray-500 text-sm text-center">
+        <div className="opacity-80 mt-6 text-sm text-center">
           © {new Date().getFullYear()} Mosharof Hosain. All rights reserved.
         </div>
       </div>
