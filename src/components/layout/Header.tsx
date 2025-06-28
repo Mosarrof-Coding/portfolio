@@ -6,20 +6,31 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 const Header = () => {
+  const [pinch, setPinch] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Prevent hydration mismatch
   useEffect(() => {
     setMounted(true);
+
+    const handleScroll = () => {
+      setPinch(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <header className="top-0 left-0 z-50 fixed bg-background shadow-md w-full transition-colors">
-      <div className="flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-3 lg:py-4 max-w-7xl">
-        {/* Logo or Name */}
+    <header
+      className={`top-0 left-0 z-50 fixed shadow-md w-full transition-all duration-300 ${
+        pinch ? "py-2 bg-background/70 backdrop-blur-sm" : "py-4 bg-background"
+      }`}
+    >
+      <div className="flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Logo */}
         <Link href="/" className="link">
           <span className="w-[190px] font-bold text-royal text-xl lg:text-2xl">
             Mosharof
@@ -51,8 +62,9 @@ const Header = () => {
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-
-          <button className="btn">Download CV</button>
+          <button className="btn">
+            <span className="hidden sm:inline-block">Download</span> CV
+          </button>
         </div>
       </div>
     </header>
